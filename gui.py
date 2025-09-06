@@ -65,22 +65,25 @@ def show_dashboard(username):
     for widget in dashboard_frame.winfo_children():
         widget.destroy()
 
+    # Create a single Operations instance per session
+    ops = Operations(username)
+
     container = ctk.CTkFrame(dashboard_frame, corner_radius=10)
     container.grid(row=0, column=0, pady=20)
 
     ctk.CTkLabel(container, text=f"Welcome {username} 👋", font=("Arial", 20, "bold")).pack(pady=15)
 
     ctk.CTkButton(container, text="💰 Deposit Money", width=250,
-                  command=lambda: run_with_input(Operations(username).deposit)).pack(pady=10)
+                  command=lambda: run_with_input(ops.deposit)).pack(pady=10)
 
     ctk.CTkButton(container, text="💸 Withdraw Money", width=250,
-                  command=lambda: run_with_input(Operations(username).withdraw)).pack(pady=10)
+                  command=lambda: run_with_input(ops.withdraw)).pack(pady=10)
 
     ctk.CTkButton(container, text="📊 Check Balance", width=250,
-                  command=lambda: run_with_input(Operations(username).check_balance)).pack(pady=10)
+                  command=lambda: run_with_input(ops.check_balance)).pack(pady=10)
 
     ctk.CTkButton(container, text="⚙️ Change Account Details", width=250,
-                  command=lambda: run_with_input(Operations(username).change_details)).pack(pady=10)
+                  command=lambda: run_with_input(ops.change_details)).pack(pady=10)
 
     ctk.CTkButton(container, text="🚪 Logout", width=250,
                   command=show_login).pack(pady=20)

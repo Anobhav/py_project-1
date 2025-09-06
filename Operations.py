@@ -3,34 +3,6 @@ import json
 class Operations:
     def __init__(self, username):
         self.username = username
-        self.show_menu()
-
-    def show_menu(self):
-        while True:
-            print(f"\nHi {self.username}! Choose an operation:")
-            print("1. Deposit Money\n2. Withdraw Money\n3. Check Balance\n4. Change Account Details\n5. Exit")
-            try:
-                opr = int(input("Enter your operation: "))
-            except ValueError:
-                print("Invalid input! Enter a number.")
-                continue
-            self.switch_case(opr)
-
-    def switch_case(self, opr):
-        match opr:
-            case 1:
-                self.deposit()
-            case 2:
-                self.withdraw()
-            case 3:
-                self.check_balance()
-            case 4:
-                self.change_details()
-            case 5:
-                print("Exiting... Goodbye!")
-                exit()
-            case _:
-                print("Invalid input, try again")
 
     def deposit(self):
         try:

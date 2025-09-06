@@ -15,16 +15,6 @@
                     "date": "2025-09-05"
                 }
             ]
-        },
-        "fff@01": {
-            "password": "fff@01",
-            "balance": 0,
-            "transactions": []
-        },
-        "tgt@01": {
-            "password": "tgt@01",
-            "balance": 0,
-            "transactions": []
         }
     }
 }
