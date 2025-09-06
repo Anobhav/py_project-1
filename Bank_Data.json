@@ -1,0 +1,30 @@
+{
+    "users": {
+        "admin": {
+            "password": "Admin@123",
+            "balance": 0,
+            "transactions": []
+        },
+        "dummyuser": {
+            "password": "User@123",
+            "balance": 5000,
+            "transactions": [
+                {
+                    "type": "deposit",
+                    "amount": 5000,
+                    "date": "2025-09-05"
+                }
+            ]
+        },
+        "fff@01": {
+            "password": "fff@01",
+            "balance": 0,
+            "transactions": []
+        },
+        "tgt@01": {
+            "password": "tgt@01",
+            "balance": 0,
+            "transactions": []
+        }
+    }
+}
